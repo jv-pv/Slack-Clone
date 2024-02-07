@@ -8,3 +8,198 @@ paragraph yellow: #ECB12F
 links blue: #2E71A6
 footer links grey: #454245
 */
+/* ! CSS Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Fluid Styles */
+
+/* @link https://utopia.fyi/type/calculator?c=320,10,1.2,1240,20,1.25,5,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+/* @link https://utopia.fyi/type/calculator?c=320,11,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+    /* Step -2: 7.6389px → 12.8px */
+    --step--2: clamp(0.4774rem, 0.3652rem + 0.561vi, 0.8rem);
+    /* Step -1: 9.1667px → 16px */
+    --step--1: clamp(0.5729rem, 0.4244rem + 0.7428vi, 1rem);
+    /* Step 0: 11px → 20px */
+    --step-0: clamp(0.6875rem, 0.4918rem + 0.9783vi, 1.25rem);
+    /* Step 1: 13.2px → 25px */
+    --step-1: clamp(0.825rem, 0.5685rem + 1.2826vi, 1.5625rem);
+    /* Step 2: 15.84px → 31.25px */
+    --step-2: clamp(0.99rem, 0.655rem + 1.675vi, 1.9531rem);
+    /* Step 3: 19.008px → 39.0625px */
+    --step-3: clamp(1.188rem, 0.752rem + 2.1798vi, 2.4414rem);
+    /* Step 4: 22.8096px → 48.8281px */
+    --step-4: clamp(1.4256rem, 0.86rem + 2.8281vi, 3.0518rem);
+    /* Step 5: 27.3715px → 61.0352px */
+    --step-5: clamp(1.7107rem, 0.9789rem + 3.6591vi, 3.8147rem);
+  }
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100dvh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  padding: 0;  
+  font-size: 10px;
+  font-family: Poppins, Helvetica, sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Nav */
+
+nav {
+    background-color: #540B51;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-height: 60px;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: var(--step--2);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.nav-left {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    width: 50%;
+    max-width: 400px;
+}
+
+.nav-left img {
+    object-fit: contain;
+    max-width: 100px;
+}
+
+.nav-left ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 100%;
+    padding: 0 0 0 10px;
+}
+
+.nav-right {
+    display: flex;
+    flex-flow: row nwrap;
+    align-items: center;
+    justify-content: space-around;
+    flex: 0 1 200px;
+}
+
+.nav-right ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    gap: 1.5rem;
+    margin: 0;
+    margin-left: 15px;
+}
+
+.nav-right ul li a {
+    white-space: nowrap;
+}
+
+.nav-right ul li:last-of-type {
+    padding: 5px 10px;
+    background-color: antiquewhite;
+    border-radius: 5px;
+}
+
+.nav-right ul li:last-of-type a {
+    color: black;
+    font-weight: 700;
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;
+}
+
+.search-button img {
+    max-width: 20px;
+    min-width: 15px;
+}
+
+
+/*  */
+
+.hamburger {
+    display: none;
+}

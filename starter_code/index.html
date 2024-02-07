@@ -6,11 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+  <!-- Google Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
   <!-- link the Font Awesome stylesheet - CDN -->
   <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet" />
 
   <!-- link your styles -->
-  <link rel="stylesheet" href="./stylesheets/style.css" />
+  <link rel="stylesheet" href="../starter_code/stylesheets/style.css" />
 
   <link rel="icon" type="image/x-icon" href="./images/slack-icon.png">
   <title>Slack is your digital HQ | Slack</title>
@@ -19,7 +25,8 @@
 <body>
   <!-- NAVBAR -->
   <nav>
-    <div>
+    <div class="nav-left">
+
       <img src="./images/slack-logo.png" alt="Slack logo" />
 
       <ul>
@@ -36,18 +43,19 @@
           <a href="#">Pricing</a>
         </li>
       </ul>
+
     </div>
 
-    <div>
-      <button>
+    <div class="nav-right">
+      <button class="search-button">
         <img src="./images/icon-search.png" alt="Search icon">
       </button>
 
-      <button>
+      <button class="hamburger">
         <img src="./images/icon-menu.png" alt="Menu icon">
       </button>
 
-      <ul hidden>
+      <ul>
         <li>
           <a href="#">Sign in</a>
         </li>
