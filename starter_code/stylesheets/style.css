@@ -198,8 +198,25 @@ ul li a {
 }
 
 
-/*  */
+/* Hambuger */
 
 .hamburger {
     display: none;
 }
+
+/* Landing Page */
+
+
+header {
+    width: 100%;
+    height: fit-content;
+    background-image: url("../images/background-singup.png");
+}
+
+header div:first {
+    display: flex;
+    flex-flow: column;
+}
+
+
+
